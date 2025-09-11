@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 
+        Youtube : Iking Lalusu 
+        Instagram : @iknglalusu_
+        WhatsApp : 081523876963
+        Tiktok : YK
+    -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Level Up Day</title>
+  <!-- font google -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Montserrat:wght@100;400&family=Press+Start+2P&family=Sedgwick+Ave+Display&family=Ubuntu:wght@300;400;500&family=Viga&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+</head>
+<style>
+  .swal2-title {
+    font-family: "Viga", sans-serif;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 30px 0 30px;
+  }
+
+  .swal2-modal {
+    background-image: linear-gradient(to top,
+        rgba(217, 143, 99, 0.8),
+        rgba(104, 150, 237, .8));
+    border: 0.7px solid #000;
+    border-radius: 30px;
+    color: white;
+    font-family: "Viga", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .swal2-modal input {
+    background: white;
+    color: black;
+  }
+
+  .swal2-html-container {
+    color: white;
+  }
+
+  body {
+    background-image: url("https://i.pinimg.com/564x/c0/f7/ce/c0f7ce03ac56f17122221b817f1b17d7.jpg");
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  body::before {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    content: "\00A9  Iking Lalusu";
+    color: white;
+    opacity: 0.4;
+    font-size: 15px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -42px;
+  }
+
+  .body {
+    display: none;
+  }
+
+  .container {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+  }
+
+  @keyframes anime {
+    0% {
+      transform: translate(0, 10px);
+    }
+
+    50% {
+      transform: translate(0, 25px);
+    }
+
+    100% {
+      transform: translate(0, 10px);
+    }
+  }
+
+  .container .ttp {
+    transition: all 2s ease;
+    animation-duration: 1.5s;
+    animation-name: keluar;
+  }
+
+  @keyframes keluar {
+    0% {
+      transform: scale(0)
+    }
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
+  .container .ganti {
+    display: none;
+  }
+
+  .container .kt1 {
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+  }
+
+  .container .kt2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: 2px dotted solid;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+
+  .container .kt3 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: 2px dotted solid;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+
+  .container blockquote {
+    padding: 20px 20px;
+    border: 1px dashed white;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-name: kt;
+    animation-duration: 1s;
+    transition: all 2s ease;
+  }
+
+  @keyframes kt {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  .btn {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    animation-duration: 2s;
+    font-size: 12px;
+    background-color: rgba(217, 143, 99, 0.8);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    color: black;
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  @keyframes muncul {
+    0% {
+      transform: translate(0, 50px);
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .btn:hover {
+    transform: scale(110%);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+  }
+
+  @media (min-width: 0px) {
+    .container .ganti {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container .ttp {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .container .ganti {
+      width: 120px;
+      height: 120px;
+    }
+
+    .container .ttp {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media (min-width: 375px) {
+    .container .ganti {
+      width: 130px;
+      height: 130px;
+    }
+
+    .container .ttp {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  @media (min-width: 425px) {
+    .container .ganti {
+      width: 140px;
+      height: 140px;
+    }
+
+    .container .ttp {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  @media (min-width: 500px) {
+    .container .ganti {
+      width: 150px;
+      height: 150px;
+    }
+
+    .container .ttp {
+      width: 150px;
+      height: 150px;
+    }
+  }
+</style>
+
+<body>
+  <div class="body">
+    <div class="container text-center">
+      <img src="https://c.tenor.com/5rfVMQY044wAAAAi/bday-happy-birthday.gif" alt="" width="180px" height="160px"
+        class="ttp mt-5 mb-4" />
+
+      <img class="ganti mt-1 mb-4" width="160px" height="160px"
+        src="https://c.tenor.com/waChlDgfqx8AAAAi/love-loving.gif" alt="" />
+      <h4 class="kt1 mb-4"></h4>
+      <blockquote>
+        <p class="kt2"></p>
+        <p class="kt3"></p>
+      </blockquote>
+      <button type="button" onclick="bukaWa();" class="btn text-center justify-content-center mt-2 text-white">
+        <i class="bi bi-whatsapp"> </i>
+        Kirim Pesan
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function play() {
+      const audio = new Audio("song/heppybirthday.mp3");
+      audio.play();
+      audio.loop = true;
+    }
+    const swalst = Swal.mixin({
+      allowOutsideClick: false,
+      showConfirmButton: true,
+      showCancelButton: false,
+    });
+    const swalss = Swal.mixin({
+      allowOutsideClick: false,
+      showConfirmButton: true,
+      showCancelButton: true,
+    });
+    const swalsy = Swal.mixin({
+      confirmButtonText: "Iy",
+      allowOutsideClick: false,
+    });
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    var i = 0,
+      text;
+    text = "";
+    function ketik() {
+      if (i < text.length) {
+        document.querySelector("h4").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(ketik, 100);
+      }
+      if (i
+        == text.length) {
+        document.querySelector("blockquote").style.display = "block";
+        ketikk();
+        document.querySelector("h4").innerHTML = text;
+      }
+    }
+    var u = 0,
+      text2;
+    text2 = "";
+    function ketikk() {
+      if (u < text2.length) {
+        document.querySelector(".kt2").innerHTML += text2.charAt(u);
+        u++;
+        setTimeout(ketikk, 200);
+      }
+      if (u == text2.length) {
+        ketikkk();
+        document.querySelector(".kt2").innerHTML = text2;
+      }
+    }
+    var a = 0,
+      text3;
+    text3 = "";
+    function ketikkk() {
+      if (a < text3.length) {
+        document.querySelector(".kt3").innerHTML += text3.charAt(a);
+        a++;
+        setTimeout(ketikkk, 150);
+      }
+      if (a == text3.length) {
+        document.querySelector(".btn").style =
+          "opacity:1;animation-name:muncul;";
+        document.querySelector(".container").style = "animation-name:anime";
+        tiws();
+        swit();
+      }
+    }
+    function showDiv() {
+      document.querySelector(".body").style.display = "block";
+    }
+    function swit() {
+      document.querySelector(".ganti").style.display = "inline";
+    }
+    function tiws() {
+      document.querySelector(".ttp").style.display = "none";
+    }
+
+    async function mulai() {
+      const {value: nama} = await swalst.fire({
+        title: "Diisi dulu namanya!",
+        input: "text",
+        confirmButtonText: "Lanjut",
+        confirmButtonColor: "#D69F7F",
+      });
+      if (nama && nama.length < 11) {
+        pnggl();
+        window.nama = nama;
+      } else {
+        await Swal.fire({
+          text: "Isi nama dulu / tbisa lebe dari 10 huruf!",
+          confirmButtonColor: "#D69F7F",
+        });
+        mulai();
+      }
+    }
+    async function pnggl() {
+      const {value: call} = await swalst.fire({
+        title: `Siapa yang kirim?`,
+        input: `text`,
+        confirmButtonColor: "#D69F7F",
+        confirmButtonText: "Lanjut",
+      });
+      if (call) {
+        window.call = call;
+        kuis();
+      } else {
+        await Swal.fire({
+          text: "Harus diisi dong baru jawab jujur!",
+          confirmButtonColor: "#D69F7F",
+        });
+        pnggl();
+      }
+    }
+    
+
+    async function kuis() {
+      await swals.fire({
+        text: `Hallo ${nama}`,
+        imageUrl: "https://c.tenor.com/qVdyIgm8wzYAAAAi/hello.gif",
+        imageWidth: 100,
+        imageHeight: 110,
+      });
+
+      await swals.fire({
+        text: `Maaf bganggu waktunya`,
+        imageUrl: "https://c.tenor.com/e1OI0HbLLVYAAAAi/mimibubu.gif",
+        imageWidth: 110,
+        imageHeight: 110,
+      });
+      await swals.fire({
+        text: `${call} cuma mau tanya`,
+        imageUrl: "https://c.tenor.com/adYqr_srXkQAAAAj/holding-hands.gif",
+        imageWidth: 120,
+        imageHeight: 90,
+      });
+      await swals.fire({
+        text: `Ini hari apa?`,
+        imageUrl: "https://c.tenor.com/9XCr9dBEygwAAAAi/peach-cat.gif",
+        imageWidth: 110,
+        imageHeight: 90,
+      });
+      await swals.fire({
+        text: `Ingat kan skrg hari apa?`,
+        imageUrl: "https://c.tenor.com/R4CwIiPJXigAAAAi/cute.gif",
+        imageWidth: 100,
+        imageHeight: 120,
+      });
+      await swalst.fire({
+        text: `Kalo sudah ingat skrg klik oke!`,
+        confirmButtonText: "oke",
+        confirmButtonColor: "#D69F7F",
+        imageUrl: "https://c.tenor.com/t19OWaRdv7oAAAAj/cute-head-pat.gif",
+        imageWidth: 100,
+        imageHeight: 110,
+      });
+      showDiv();
+      text = `Happy Level Up Day ${nama}, 🎉`;
+      text2 = `${call} cuma mau b ucapkan happy leveling up ${nama} 💕`;
+      text3 = `Semoga panjang umur sehat selalu harus tambah dewasa kedepannya ${nama}, dn semoga yang disemogakan bukan hanya jadi semoga tapi cepat tersemogakan aamiin hehe, btw maaf so bikin ${nama} harus ribet buat bbuka ini, skali lagi selamat ulang tahun ${nama} cantik hehe ❤️`;
+      ketik();
+      
+        play();
+    }
+    mulai();
+
+    async function bukaWa() {
+      var {isConfirmed: tanyawal} = await swalss.fire({
+        text: `Mau bkirim pesan buat ${call}?`,
+        confirmButtonText: "Iye",
+        cancelButtonText: "Tmau",
+        confirmButtonColor: "#82c1fc",
+        cancelButtonColor: "#f56454cc",
+      });
+      if (tanyawal) {
+        window.location = `https://wa.me/+6285169332155?text=Makasih ${call} so bikin akan hehehe, i love you ${call} ❤️`;
+      } else {
+        await swals.fire({
+          text: `padahal ${call} so berharap pesan dari ${nama}`,
+          imageUrl: "https://c.tenor.com/Q9VuGIKQqEMAAAAi/love-bear.gif",
+          imageWidth: 100,
+          imageHeight: 100,
+        });
+        await swalst.fire({
+          text: `${nama} kirim pesan ee buat ${call} ee?!`,
+          imageUrl: "https://c.tenor.com/amRuuQRN6d0AAAAi/love.gif",
+          imageWidth: 120,
+          imageHeight: 120,
+          confirmButtonColor: "#82c1fc",
+          confirmButtonText: "Iye",
+        });
+        window.location = `https://wa.me/+6285169332155?text=Makasih ${call} so bikin akan hehehe, i love you ${call} ❤️`;
+      }
+    }
+  </script>
+</body>
+
+</html>
